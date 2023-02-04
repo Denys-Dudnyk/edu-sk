@@ -2,8 +2,10 @@
 const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
 
-const primary = '#E30B13'
-
+const primary = '#717cff'
+const secondary = '#181059'
+const third = '#f8f4ff'
+const four = '#8645FF'
 module.exports = {
 	content: [
 		'./app/**/*.{js,ts,jsx,tsx}',
@@ -13,11 +15,14 @@ module.exports = {
 	theme: {
 		colors: {
 			primary,
+			secondary,
+			third,
+			four,
 			black: colors.black,
 			white: colors.white,
 			transparent: colors.transparent,
 			yellow: {
-				700: '#F5C521',
+				700: '#edbb01',
 			},
 			gray: {
 				300: '#d9dae8',
@@ -83,12 +88,12 @@ module.exports = {
 		plugin(({ addComponents, theme, addUtilities }) => {
 			addComponents({
 				'.btn-primary': {
-					backgroundColor: primary,
+					backgroundColor: four,
 					color: '#fff',
 					borderRadius: '0.65rem',
 					transition: 'background-color .3s ease-in-out',
 					'&:hover': {
-						backgroundColor: '#ff0009',
+						backgroundColor: '#8645FF',
 					},
 				},
 
@@ -105,8 +110,7 @@ module.exports = {
 
 				'.air-block': {
 					borderRadius: theme('borderRadius.layout'),
-					backgroundColor: theme('colors.gray.950'),
-					color: theme('colors.white'),
+					backgroundColor: theme('colors.white'),
 					boxShadow: theme('boxShadow.lg'),
 				},
 			})

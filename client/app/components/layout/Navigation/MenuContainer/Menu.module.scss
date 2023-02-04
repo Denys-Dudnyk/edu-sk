@@ -1,0 +1,55 @@
+.nav {
+	@apply flex flex-row justify-between py-5 px-40 items-center;
+	.btn {
+		@apply px-8 py-2 rounded-2xl border-2 border-four border-solid font-medium text-gray-700;
+		font-size: 17px;
+	}
+	.btn:hover {
+		@apply bg-four text-white;
+		transition: 0.4s;
+	}
+	.navigation {
+		> ul {
+			@apply flex justify-end text-center;
+
+			> li {
+				@apply list-none ml-16 inline-block;
+
+				> a {
+					@apply text-gray-800 font-normal relative  py-3;
+					font-size: 17px;
+
+					&::before {
+						height: 3px;
+						@apply absolute w-6  bg-transparent transition-colors left-0 bottom-0 rounded-md;
+						content: '';
+						transition: width 0.35s;
+					}
+
+					&:hover {
+						@apply text-gray-600;
+					}
+
+					&.active {
+						@apply text-opacity-100;
+
+						> svg {
+							@apply fill-four;
+						}
+
+						&::before {
+							@apply bg-four;
+						}
+						&:hover:before {
+							@apply w-full;
+						}
+					}
+				}
+
+				> a:hover:before {
+					@apply absolute w-full;
+				}
+			}
+		}
+	}
+}

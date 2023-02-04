@@ -1,0 +1,11 @@
+.wrapper {
+	@apply mt-32;
+
+	> form {
+		@apply mx-auto w-1/3 air-block bg-opacity-80 p-7 text-center;
+
+		> buttons {
+			@apply mt-12 shadow-lg;
+		}
+	}
+}
