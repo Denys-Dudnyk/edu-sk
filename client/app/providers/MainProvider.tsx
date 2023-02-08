@@ -23,7 +23,7 @@ const MainProvider: FC<PropsWithChildren> = ({ children }) => {
 			<Provider store={store}>
 				<QueryClientProvider client={queryClient}>
 					<ReduxToast />
-					{children}
+					<Layout>{children}</Layout>
 				</QueryClientProvider>
 			</Provider>
 		</HeadProvider>

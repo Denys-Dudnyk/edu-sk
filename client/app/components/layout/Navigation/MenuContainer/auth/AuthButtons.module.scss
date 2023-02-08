@@ -1,0 +1,11 @@
+.btn {
+	.btn_auth {
+		@apply px-8 py-2 rounded-2xl border-2 border-four border-solid font-medium text-secondary;
+		font-size: 17px;
+	}
+
+	.btn_auth:hover {
+		@apply bg-four text-white;
+		transition: 0.4s;
+	}
+}

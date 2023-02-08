@@ -11,10 +11,11 @@ import styles from './Home.module.scss'
 const Home: FC = () => {
 	return (
 		<Meta title="Home page" description="Education in best Uni in SK">
-			<div className={styles.layout}>
+			{/* <div className={styles.layout}>
 				<Navigation />
-				<Payment />
-			</div>
+		
+			</div> */}
+			<Payment />
 		</Meta>
 	)
 }

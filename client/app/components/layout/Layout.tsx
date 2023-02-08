@@ -8,11 +8,12 @@ import styles from './Layout.module.scss'
 import Navigation from './Navigation/Navigation'
 import Payment from './Payment/Payment'
 
-const Layout: FC<PropsWithChildren> = () => {
+const Layout: FC<PropsWithChildren> = ({ children }) => {
 	return (
 		// <Meta title="Home page" description="Education in best Uni in SK">
 		<div className={styles.layout}>
 			<Navigation />
+			{children}
 		</div>
 		// </Meta>
 	)

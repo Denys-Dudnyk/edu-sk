@@ -1,12 +1,14 @@
 import { FC } from 'react'
 
 import Menu from './Menu'
-import { navItems } from './menu.data'
+import styles from './Menu.module.scss'
+import { navItems, userMenu } from './menu.data'
 
 const MenuContainer: FC = () => {
 	return (
-		<div>
+		<div className={styles.container}>
 			<Menu item={navItems} />
+			<Menu item={userMenu} />
 		</div>
 	)
 }

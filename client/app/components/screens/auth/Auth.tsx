@@ -6,6 +6,7 @@ import Navigation from '@/components/layout/Navigation/Navigation'
 import Button from '@/ui/form-elements/Button'
 import Heading from '@/ui/heading/Heading'
 
+import { useActions } from '@/hooks/useActions'
 import { useAuth } from '@/hooks/useAuth'
 
 import Meta from '@/utils/meta/Meta'
@@ -31,12 +32,14 @@ const Auth: FC = () => {
 		mode: 'onChange',
 	})
 
-	const login = (data: any) => {
-		alert(`Login ${data}`)
-	}
-	const register = (data: any) => {
-		alert(`Register ${data}`)
-	}
+	const { login, register } = useActions()
+
+	// const login = (data: any) => {
+	// 	alert(`Login ${data}`)
+	// }
+	// const register = (data: any) => {
+	// 	alert(`Register ${data}`)
+	// }
 
 	const onSubmit: SubmitHandler<IAuthInput> = (data) => {
 		if (type === 'login') login(data)
@@ -46,7 +49,7 @@ const Auth: FC = () => {
 
 	return (
 		<Meta title="Authorization">
-			<Navigation />
+			{/* <Navigation /> */}
 			<section className={styles.wrapper}>
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<Heading title="Auth" className="mb-6" />
@@ -67,7 +70,7 @@ const Auth: FC = () => {
 						</Button>
 						<Button
 							type="submit"
-							onClick={() => setType('login')}
+							onClick={() => setType('register')}
 							disabled={isLoading}
 						>
 							Register

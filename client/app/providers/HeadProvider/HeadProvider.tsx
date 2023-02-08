@@ -1,10 +1,10 @@
 import Head from 'next/head'
+import NextNProgress from 'nextjs-progressbar'
 import { FC, PropsWithChildren } from 'react'
 
 import { accentColor } from '@/config/constants'
 
 import Favicons from './FavIcons'
-import NextNProgress from 'nextjs-progressbar'
 
 const HeadProvider: FC<PropsWithChildren> = ({ children }) => {
 	return (
@@ -31,6 +31,7 @@ const HeadProvider: FC<PropsWithChildren> = ({ children }) => {
 					content={'#181B1E'}
 				/>
 				<link rel="manifest" href="/manifest.json" />
+				<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
 			</Head>
 			{children}
 		</>

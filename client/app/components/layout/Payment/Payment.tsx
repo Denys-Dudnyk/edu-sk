@@ -7,13 +7,10 @@ import Plans from './Plans'
 const Payment: FC = () => {
 	return (
 		<div className={styles.payment}>
-			<PaymentMethod />
-			<div className={styles.wrap}>
-				<Plans />
-				<Plans />
-				<Plans />
-				<Plans />
-			</div>
+			{/* <PaymentMethod /> */}
+			{/* <div className={styles.wrap}> */}
+			<Plans />
+			{/* </div> */}
 		</div>
 	)
 }

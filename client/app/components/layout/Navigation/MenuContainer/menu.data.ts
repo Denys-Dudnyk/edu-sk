@@ -17,7 +17,7 @@ export const navItems: IMenu = {
 		},
 		{
 			title: 'Responsibilities',
-			link: '/auth',
+			link: '/###',
 		},
 		{
 			title: 'Country',
